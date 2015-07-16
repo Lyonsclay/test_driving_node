@@ -1,9 +1,10 @@
-var chai = require('chai');
-expect = chai.expect;
+var chai = require('chai'),
+  expect = chai.expect,
+  Funk = require('../../app/funk.js');
 
 describe('Funk', function () {
   it('is an object', function () {
-    expect(2).to.eq(2);
+    expect(Funk()).to.have.property('start');
   });
 });
 
