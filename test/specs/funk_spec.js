@@ -12,12 +12,12 @@ describe('Funk', function () {
   });
 
   describe('start', function () {
-    it('set a property on Funk', function () {
+    before(function (done) {
       funk = Funk();
-      expect(funk.good).to.be.an('undefined');
+      funk.start(done);
+    });
 
-      funk.start();
-
+    it('set a property on Funk', function () {
       expect(funk.good).to.eq('goody');
     });
   });
