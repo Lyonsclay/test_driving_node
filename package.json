@@ -4,7 +4,8 @@
   "description": "tdd with node",
   "main": "index.js",
   "scripts": {
-    "test": "mocha "
+    "start": "coffee --compile --output test/specs --watch test/specs/coffee",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --require coffee-script --compilers coffee:coffee-script/register --recursive ./test"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/Lyonsclay/test_driving_node#readme",
   "devDependencies": {
     "chai": "^3.0.0",
+    "coffee-script": "^1.9.3",
     "mocha": "^2.2.5",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0"

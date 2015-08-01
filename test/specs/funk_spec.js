@@ -14,6 +14,7 @@ describe('Funk', function () {
   describe('start', function () {
     before(function (done) {
       funk = Funk();
+
       funk.start(done);
     });
 

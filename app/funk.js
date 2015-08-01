@@ -8,7 +8,7 @@ var Funk = function () {
     }, 9);
   };
 
-  setGood = function () {
+  function setGood () {
     obj.good = 'goody';
   };
 
